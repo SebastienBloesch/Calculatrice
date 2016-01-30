@@ -52,7 +52,7 @@
     <?php
         echo Vue::formulaire();
 
-        if(isset($_POST['ok'])){
+        if(isset($_POST['ok']) && !empty($_POST['numbers']) && !empty($_POST['calcul'])){
             $v = explode(',',$_POST['numbers']);
             $calc = new Calculatrice($v);
             $res = $calc->calculer($_POST['calcul']);
