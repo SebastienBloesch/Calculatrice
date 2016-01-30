@@ -56,7 +56,7 @@
             $v = explode(',',$_POST['numbers']);
             $calc = new Calculatrice($v);
             $res = $calc->calculer($_POST['calcul']);
-            echo $res;
+            echo 'Resultat : ' . $res;
         }
     ?>
 </body>
